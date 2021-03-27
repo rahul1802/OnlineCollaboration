@@ -33,10 +33,10 @@ public class BlogDaoImpl implements IBlogDao {
 
 
 	//@Override
-	/*public List<Blog> mainList() {
+	public List<Blog> mainList() {
 		
-		return null;
-	}*/
+		return sessionFactory.getCurrentSession().createQuery("from Blog", Blog.class).getResultList();
+	}
 
 	@Override
 	public Blog getBlogById(int blogId) {
@@ -86,8 +86,8 @@ public class BlogDaoImpl implements IBlogDao {
 	}
 
 	@Override
-	public List<Blog> getUsersBlogs(int id) {
-		String q="From Blog where id='"+id+"'";
+	public List<Blog> getUsersBlogs(int userId) {
+		String q="From Blog where Userid='"+userId+"'";
 		Query query=sessionFactory.getCurrentSession().createQuery(q);
 		return query.getResultList();
 		

@@ -60,7 +60,7 @@ public class BlogCommentsDaoImpl implements IBlogCommentsDao {
 	public boolean deleteBlogComments(BlogComments blogComments) {
 		try
 		{
-			sessionFactory.getCurrentSession().delete(blogComments.getBlogCommentId());
+			sessionFactory.getCurrentSession().delete(blogComments);
 			return true;
 			
 		}

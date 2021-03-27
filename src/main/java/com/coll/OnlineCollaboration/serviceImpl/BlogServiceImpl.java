@@ -53,4 +53,11 @@ public class BlogServiceImpl implements IBlogService {
 	public boolean deleteBlog(Blog blog) {
 		return blogDao.deleteBlog(blog);
 	}
+
+	@Override
+	public List<Blog> mainList() {
+		
+		return blogDao.mainList();
+	}
+	
 }
