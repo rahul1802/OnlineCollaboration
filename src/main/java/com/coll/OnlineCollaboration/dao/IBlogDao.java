@@ -11,7 +11,7 @@ public interface IBlogDao {
 	Blog getBlogById(int blogId);
 	boolean addBlog(Blog blog);
 	boolean updateBlog(Blog blog);
-	boolean deleteBlog(Blog blog);
+	boolean deleteBlog(Blog blog); 
 
 	
 }

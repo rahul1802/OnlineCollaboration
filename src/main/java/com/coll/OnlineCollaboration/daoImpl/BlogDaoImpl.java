@@ -31,7 +31,7 @@ public class BlogDaoImpl implements IBlogDao {
 		return query.getResultList();
 	}
 
-
+ 
 	//@Override
 	public List<Blog> mainList() {
 		

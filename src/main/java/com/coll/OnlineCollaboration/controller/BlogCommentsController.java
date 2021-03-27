@@ -52,5 +52,5 @@ public class BlogCommentsController {
 	{
 		blogComments.setBlogCommentId(blogCommentId);
 		return blogCommentsService.updateBlogComments(blogComments);
-	}
+	} 
 }

@@ -35,7 +35,7 @@ public class BlogCommentsServiceImpl implements IBlogCommentsService {
 	public boolean updateBlogComments(BlogComments blogComments) {
 		 return Bgc.updateBlogComments(blogComments);	
 	}
-
+ 
 	@Override
 	public boolean deleteBlogComments(BlogComments blogComments) {
 		 return Bgc.deleteBlogComments(blogComments);

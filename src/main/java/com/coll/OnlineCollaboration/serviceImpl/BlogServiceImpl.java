@@ -35,7 +35,7 @@ public class BlogServiceImpl implements IBlogService {
 	@Override
 	public Blog getBlogById(int blogId) {
 		
-		return blogDao.getBlogById(blogId);
+		return blogDao.getBlogById(blogId); 
 	}
 
 	@Override

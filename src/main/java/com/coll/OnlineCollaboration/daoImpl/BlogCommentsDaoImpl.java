@@ -37,7 +37,7 @@ public class BlogCommentsDaoImpl implements IBlogCommentsDao {
 		catch(Exception e)
 		{
 			e.printStackTrace();
-			return false;
+			return false; 
 		}
 	}
 
