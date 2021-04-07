@@ -54,12 +54,14 @@ package com.coll.OnlineCollaboration.controller;
 	        return userService.updateUser(user);  
 	    } 
 	    
-	    @RequestMapping(value="login/{username,password}", method=RequestMethod.POST)  
-	    public User validateUser(@RequestBody User user,@PathVariable("username") String username, @PathVariable("password") String password) {  
-	        user.setUsername(username);  
-	        user.setPassword(password);
+	    @RequestMapping(value="login", method=RequestMethod.POST)  
+	    public User validateUser(@RequestBody User user) {  
 	        return userService.validateUser(user);  
 	    } 
+	    @RequestMapping(value="logout/{userId}", method=RequestMethod.POST)  
+	    public boolean logout(@PathVariable("userId") int userId) {  
+	        return userService.logout(userId);  
+	    }
 	}
 
 

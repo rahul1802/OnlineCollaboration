@@ -50,6 +50,7 @@ public class UserDaoImpl implements IUserDao{
 		try
 		{
 			user=(User)query.getSingleResult();
+			user.setIsOnline(true);
 			return user;
 		}
 		catch(Exception e)
@@ -155,4 +156,18 @@ public class UserDaoImpl implements IUserDao{
 		
 	}
 
+	@Override
+	public boolean logout(int userId) {
+	try
+	{
+		User user= getUserById(userId);
+		user.setIsOnline(false);
+		sessionFactory.getCurrentSession().update(user);
+		return true;
+	}
+	catch(Exception ex) {
+		ex.printStackTrace();
+		return false;
+	}
+}
 }

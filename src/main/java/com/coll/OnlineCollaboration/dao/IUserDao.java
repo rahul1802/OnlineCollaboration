@@ -15,4 +15,5 @@ boolean deactivateUser(int userId);
 boolean updateUserProfile(String file,int userId);
 List<User> getAllDeactiveUser();
 boolean activateUser(int userId);
+boolean logout(int userId);
 }

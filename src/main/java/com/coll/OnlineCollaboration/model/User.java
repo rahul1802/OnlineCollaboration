@@ -90,10 +90,10 @@ public String getStatus() {
 public void setStatus(String status) {
 	this.status = status;
 }
-public boolean getOnline() {
+public boolean getIsOnline() {
 	return isOnline;
 }
-public void setOnline(boolean isOnline) {
+public void setIsOnline(boolean isOnline) {
 	this.isOnline = isOnline;
 }
 public boolean getEnabled() {

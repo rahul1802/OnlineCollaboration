@@ -76,6 +76,11 @@ public class UserServiceImpl implements IUserService {
 		return userDao.activateUser(userId);
 	}
 
+	@Override
+	public boolean logout(int userId) {
+		return userDao.logout(userId);
+	}
+
 
 	
 	
