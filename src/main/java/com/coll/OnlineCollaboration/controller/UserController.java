@@ -54,7 +54,7 @@ package com.coll.OnlineCollaboration.controller;
 	        return userService.updateUser(user);  
 	    } 
 	    
-	    @RequestMapping(value="login", method=RequestMethod.POST)  
+	    @RequestMapping(value="validate-user", method=RequestMethod.POST)  
 	    public User validateUser(@RequestBody User user) {  
 	        return userService.validateUser(user);  
 	    } 

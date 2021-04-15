@@ -17,7 +17,7 @@ private static final long serialVersionUID=1L;
 @GeneratedValue(strategy=GenerationType.IDENTITY)
 private int userId;
 private String firstName;
-private String LastName;
+private String lastName;
 private String username;
 private String password;
 private String email;
@@ -25,23 +25,7 @@ private String role;
 private String status;
 private boolean isOnline;
 private boolean enabled;
-public User()
-{
-	
-}
-public User(String firstName, String lastName, String username, String password, String email, String role,
-		String status, boolean isOnline, boolean enabled) {
-	super();
-	this.firstName = firstName;
-	LastName = lastName;
-	this.username = username;
-	this.password = password;
-	this.email = email;
-	this.role = role;
-	this.status = status;
-	this.isOnline = isOnline;
-	this.enabled = enabled;
-}
+
 public int getUserId() {
 	return userId;
 }
@@ -55,10 +39,10 @@ public void setFirstName(String firstName) {
 	this.firstName = firstName;
 }
 public String getLastName() {
-	return LastName;
+	return lastName;
 }
 public void setLastName(String lastName) {
-	LastName = lastName;
+	this.lastName = lastName;
 }
 public String getUsername() {
 	return username;

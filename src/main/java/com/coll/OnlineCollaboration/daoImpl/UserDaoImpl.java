@@ -45,12 +45,15 @@ public class UserDaoImpl implements IUserDao{
 	public User validateUser(User user) {
 		String username =user.getUsername();
 		String password=user.getPassword();
-		String q="From user where username='"+username+"'and password='"+password+"'";
+		String q="From User where username='"+username+"'and password='"+password+"'";
 		Query query=sessionFactory.getCurrentSession().createQuery(q);
 		try
 		{
 			user=(User)query.getSingleResult();
-			user.setIsOnline(true);
+			if(user.getEnabled()==true) {
+				
+				user.setIsOnline(true);
+			}
 			return user;
 		}
 		catch(Exception e)
@@ -146,6 +149,7 @@ public class UserDaoImpl implements IUserDao{
 		try {
 			User user=getUserById(userId);
 			user.setEnabled(true);
+			user.setStatus("Active");
 			sessionFactory.getCurrentSession().update(user);
 			return true;
 		}
